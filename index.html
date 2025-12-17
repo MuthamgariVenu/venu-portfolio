@@ -5,10 +5,8 @@
   <title>Venu | Full Stack Web Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -19,8 +17,9 @@
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
     <h1 class="font-bold text-white">Venu</h1>
     <div class="space-x-4 text-sm">
-      <a href="#projects" class="hover:text-indigo-400">Projects</a>
-      <a href="#contact" class="hover:text-indigo-400">Contact</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -32,14 +31,15 @@
       Hi, I'm <span class="text-indigo-500">Venu</span>
     </h2>
     <p class="mt-4 text-xl text-gray-400">
-      Full Stack Web Developer | Freelancer
+      Full Stack Web Developer & QA Automation Engineer
     </p>
     <p class="mt-6 text-gray-400">
-      I build fast, scalable web applications that solve real business problems.
+      I build and test scalable web applications that are fast, reliable,
+      and ready for real users.
     </p>
     <a href="#contact"
        class="inline-block mt-8 bg-indigo-600 px-6 py-3 rounded hover:bg-indigo-700">
-      Hire Me
+      Get Free Consultation
     </a>
   </div>
 </section>
@@ -68,7 +68,7 @@
     <div class="project-card bg-gray-900 p-6 rounded-lg">
       <h3 class="font-semibold">Business Website</h3>
       <p class="text-sm text-gray-400">
-        Responsive business site with clean UI.
+        Responsive business website.
       </p>
       <p class="text-xs text-indigo-400 mt-2">
         HTML, Tailwind, JavaScript
@@ -83,20 +83,99 @@
   </div>
 </section>
 
+<!-- SERVICES -->
+<section id="services" class="py-20 bg-gray-900">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">
+      Services & Hourly Rates
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Frontend -->
+      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transition">
+        <h3 class="font-semibold text-lg">
+          Frontend Development
+        </h3>
+
+        <ul class="text-sm text-gray-400 mt-4 space-y-2">
+          <li>✔ Responsive UI (Mobile-first)</li>
+          <li>✔ HTML, CSS, TailwindCSS</li>
+          <li>✔ JavaScript interactions</li>
+          <li>✔ SEO-friendly pages</li>
+        </ul>
+
+        <p class="mt-5 text-indigo-400 font-semibold">
+          $7 – $15 / hour
+        </p>
+
+        <p class="text-xs text-gray-400 mt-2">
+          Ideal for websites, landing pages, UI improvements
+        </p>
+      </div>
+
+      <!-- Full Stack -->
+      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transition">
+        <h3 class="font-semibold text-lg">
+          Full-Stack Web Development
+        </h3>
+
+        <ul class="text-sm text-gray-400 mt-4 space-y-2">
+          <li>✔ Frontend + Backend</li>
+          <li>✔ REST APIs & integrations</li>
+          <li>✔ Database (MongoDB / SQL)</li>
+          <li>✔ Admin panel & auth</li>
+        </ul>
+
+        <p class="mt-5 text-indigo-400 font-semibold">
+          $15 – $25 / hour
+        </p>
+
+        <p class="text-xs text-gray-400 mt-2">
+          Best for startups, SaaS, custom applications
+        </p>
+      </div>
+
+      <!-- Testing -->
+      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transition">
+        <h3 class="font-semibold text-lg">
+          Testing Services
+        </h3>
+
+        <ul class="text-sm text-gray-400 mt-4 space-y-2">
+          <li>✔ Manual Testing</li>
+          <li>✔ Test case creation</li>
+          <li>✔ Regression & sanity testing</li>
+          <li>✔ Automation (UI / API)</li>
+        </ul>
+
+        <p class="mt-5 text-indigo-400 font-semibold">
+          $5 – $10 / hour
+        </p>
+
+        <p class="text-xs text-gray-400 mt-2">
+          Ensuring quality, stability, and performance
+        </p>
+      </div>
+
+    </div>
+
+    <p class="text-center text-xs text-gray-400 mt-10">
+      * Final cost depends on project scope, timeline, and complexity.
+    </p>
+  </div>
+</section>
+
 <!-- CONTACT -->
-<section id="contact" class="py-20 bg-gray-900">
+<section id="contact" class="py-20">
   <div class="max-w-md mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-6">Contact Me</h2>
 
-    <!-- 🔴 CHANGE EMAIL BELOW -->
     <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com"
           method="POST"
           class="space-y-4">
 
       <input type="hidden" name="_captcha" value="false">
-
-      <input type="hidden" name="_next"
-        value="https://muthamgarivenu.github.io/portfolio-venu/#contact">
 
       <input type="text" name="name" placeholder="Your Name" required
         class="w-full p-3 bg-gray-800 rounded">
@@ -104,7 +183,7 @@
       <input type="email" name="email" placeholder="Your Email" required
         class="w-full p-3 bg-gray-800 rounded">
 
-      <textarea name="message" placeholder="Your Message" required
+      <textarea name="message" placeholder="Your Requirement" required
         class="w-full p-3 bg-gray-800 rounded"></textarea>
 
       <button type="submit"
@@ -115,12 +194,10 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="py-6 text-center text-sm text-gray-500">
-  © 2025 Venu | Full Stack Web Developer
+  © 2025 Venu | Full Stack Developer & QA
 </footer>
 
-<!-- JS -->
 <script src="./js/main.js"></script>
 </body>
 </html>

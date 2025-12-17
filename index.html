@@ -14,49 +14,113 @@
 
 <body class="bg-gray-950 text-gray-200">
 
-  <!-- NAVBAR -->
-  <nav class="fixed w-full bg-gray-900 z-50">
-    ...
-  </nav>
+<!-- NAVBAR -->
+<nav class="fixed w-full bg-gray-900 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
+    <h1 class="font-bold text-white">Venu</h1>
+    <div class="space-x-4 text-sm">
+      <a href="#projects" class="hover:text-indigo-400">Projects</a>
+      <a href="#contact" class="hover:text-indigo-400">Contact</a>
+    </div>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    ...
-  </section>
+<!-- HERO -->
+<section class="min-h-screen flex items-center pt-24">
+  <div class="max-w-5xl mx-auto text-center px-6">
+    <h2 class="text-4xl md:text-6xl font-bold">
+      Hi, I'm <span class="text-indigo-500">Venu</span>
+    </h2>
+    <p class="mt-4 text-xl text-gray-400">
+      Full Stack Web Developer | Freelancer
+    </p>
+    <p class="mt-6 text-gray-400">
+      I build fast, scalable web applications that solve real business problems.
+    </p>
+    <a href="#contact"
+       class="inline-block mt-8 bg-indigo-600 px-6 py-3 rounded hover:bg-indigo-700">
+      Hire Me
+    </a>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    ...
-  </section>
+<!-- PROJECTS -->
+<section id="projects" class="py-20 max-w-6xl mx-auto px-6">
+  <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    ...
-  </section>
+  <div class="grid md:grid-cols-2 gap-8">
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <form
-      action="https://formsubmit.co/YOUR_EMAIL@gmail.com"
-      method="POST"
-      id="contactForm"
-    >
+    <div class="project-card bg-gray-900 p-6 rounded-lg">
+      <h3 class="font-semibold">Hospital Management System</h3>
+      <p class="text-sm text-gray-400">
+        Appointment booking & admin dashboard.
+      </p>
+      <p class="text-xs text-indigo-400 mt-2">
+        HTML, Tailwind, JavaScript
+      </p>
+      <a href="https://ashwini-hospital.vercel.app/"
+         target="_blank"
+         class="inline-block mt-4 text-indigo-400 underline">
+        Live Project
+      </a>
+    </div>
+
+    <div class="project-card bg-gray-900 p-6 rounded-lg">
+      <h3 class="font-semibold">Business Website</h3>
+      <p class="text-sm text-gray-400">
+        Responsive business site with clean UI.
+      </p>
+      <p class="text-xs text-indigo-400 mt-2">
+        HTML, Tailwind, JavaScript
+      </p>
+      <a href="https://aqua-a-z.vercel.app/"
+         target="_blank"
+         class="inline-block mt-4 text-indigo-400 underline">
+        Live Project
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 bg-gray-900">
+  <div class="max-w-md mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-6">Contact Me</h2>
+
+    <!-- 🔴 CHANGE EMAIL BELOW -->
+    <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com"
+          method="POST"
+          class="space-y-4">
+
       <input type="hidden" name="_captcha" value="false">
+
       <input type="hidden" name="_next"
         value="https://muthamgarivenu.github.io/portfolio-venu/#contact">
 
-      <input name="name" required>
-      <input name="email" type="email" required>
-      <textarea name="message" required></textarea>
+      <input type="text" name="name" placeholder="Your Name" required
+        class="w-full p-3 bg-gray-800 rounded">
 
-      <button type="submit">Send Message</button>
+      <input type="email" name="email" placeholder="Your Email" required
+        class="w-full p-3 bg-gray-800 rounded">
+
+      <textarea name="message" placeholder="Your Message" required
+        class="w-full p-3 bg-gray-800 rounded"></textarea>
+
+      <button type="submit"
+        class="w-full bg-indigo-600 py-3 rounded hover:bg-indigo-700">
+        Send Message
+      </button>
     </form>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>© 2025 Venu</footer>
+<!-- FOOTER -->
+<footer class="py-6 text-center text-sm text-gray-500">
+  © 2025 Venu | Full Stack Web Developer
+</footer>
 
-  <!-- MAIN JS -->
-  <script src="./js/main.js"></script>
+<!-- JS -->
+<script src="./js/main.js"></script>
 </body>
 </html>

@@ -5,26 +5,26 @@
   <title>Muthamgari Venu | Full Stack Web Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Tailwind -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
+    html { scroll-behavior: smooth; }
     .hidden-section { display: none; }
   </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-<!-- ================= NAVBAR ================= -->
-<nav class="fixed top-0 w-full bg-white shadow z-50">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="font-bold text-indigo-600 cursor-pointer"
-        onclick="showSection('home')">
+<!-- ================= NAVBAR (DESKTOP) ================= -->
+<nav class="fixed top-0 w-full bg-white shadow z-50 hidden md:block">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 onclick="showSection('home')"
+        class="text-lg font-bold text-indigo-600 cursor-pointer">
       Muthamgari Venu
     </h1>
 
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex space-x-6 text-sm font-medium">
+    <div class="space-x-6 text-sm font-medium">
       <button onclick="showSection('projects')" class="hover:text-indigo-600">Projects</button>
       <button onclick="showSection('services')" class="hover:text-indigo-600">Services</button>
       <button onclick="showSection('contact')" class="hover:text-indigo-600">Contact</button>
@@ -33,44 +33,57 @@
 </nav>
 
 <!-- ================= MOBILE MODULE NAV ================= -->
-<div class="md:hidden fixed top-16 w-full bg-white shadow z-40">
-  <div class="grid grid-cols-3 gap-2 px-3 py-3 text-center text-xs font-medium">
-    <button onclick="showSection('projects')" class="bg-indigo-50 rounded-xl py-3">📂<br>Projects</button>
-    <button onclick="showSection('services')" class="bg-indigo-50 rounded-xl py-3">🛠️<br>Services</button>
-    <button onclick="showSection('contact')" class="bg-indigo-50 rounded-xl py-3">📩<br>Contact</button>
+<div class="md:hidden fixed top-0 w-full bg-white shadow z-50">
+  <div class="text-center py-3 font-bold text-indigo-600">
+    Muthamgari Venu
+  </div>
+
+  <div class="grid grid-cols-3 gap-2 px-3 pb-3 text-center text-xs font-medium">
+    <button onclick="showSection('projects')" class="bg-indigo-50 rounded-xl py-3">
+      📂<br>Projects
+    </button>
+    <button onclick="showSection('services')" class="bg-indigo-50 rounded-xl py-3">
+      🛠️<br>Services
+    </button>
+    <button onclick="showSection('contact')" class="bg-indigo-50 rounded-xl py-3">
+      📩<br>Contact
+    </button>
   </div>
 </div>
 
 <!-- ================= HOME ================= -->
-<section id="home" class="min-h-screen pt-40 md:pt-28 px-6">
+<section id="home" class="min-h-screen pt-44 md:pt-32 px-6 bg-gradient-to-b from-white to-gray-100">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-    <!-- Left -->
+    <!-- Content -->
     <div>
-      <h2 class="text-4xl md:text-5xl font-extrabold">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900">
         Hi, I'm <span class="text-indigo-600">Muthamgari Venu</span>
       </h2>
+
       <p class="mt-4 text-xl text-gray-600">
         Full Stack Web Developer & QA Engineer
       </p>
-      <p class="mt-6 text-gray-600">
-        I build and test scalable, high-quality web applications for startups
-        and businesses.
+
+      <p class="mt-6 text-gray-600 leading-relaxed">
+        I build and test scalable, production-ready web applications
+        with clean UI, strong backend logic, and real-world quality.
       </p>
 
       <div class="mt-8 flex gap-4">
         <button onclick="showSection('contact')"
-                class="bg-indigo-600 text-white px-6 py-3 rounded-lg">
+                class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">
           Get Free Consultation
         </button>
+
         <button onclick="showSection('projects')"
-                class="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg">
+                class="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50">
           View Work
         </button>
       </div>
     </div>
 
-    <!-- Right -->
+    <!-- Photo -->
     <div class="flex justify-center">
       <div class="bg-white p-4 rounded-3xl shadow-2xl">
         <img src="profile.jpg"
@@ -83,64 +96,136 @@
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section id="projects" class="hidden-section py-24 px-6">
-  <h2 class="text-3xl font-bold text-center mb-10">Featured Projects</h2>
+<section id="projects" class="hidden-section py-24 px-6 bg-white">
+  <h2 class="text-4xl font-extrabold text-center mb-16">Featured Projects</h2>
 
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-    <div class="bg-white shadow-xl rounded-2xl p-6">
-      <h3 class="font-bold text-xl">Hospital Management System</h3>
-      <p class="mt-3 text-gray-600">Appointment booking & admin dashboard.</p>
-      <a href="https://ashwini-hospital.vercel.app/" target="_blank"
-         class="inline-block mt-4 text-indigo-600">Live Demo →</a>
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+
+    <!-- Project Card -->
+    <div class="group relative rounded-2xl p-[1px]
+                bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+                hover:scale-[1.02] transition">
+
+      <div class="bg-white rounded-2xl p-8 shadow-xl group-hover:shadow-2xl">
+        <h3 class="text-2xl font-bold">Hospital Management System</h3>
+
+        <p class="mt-4 text-gray-600">
+          Complete hospital solution with appointment booking,
+          admin dashboard, and patient management.
+        </p>
+
+        <div class="mt-4 text-sm font-semibold text-indigo-600">
+          HTML · TailwindCSS · JavaScript
+        </div>
+
+        <a href="https://ashwini-hospital.vercel.app/" target="_blank"
+           class="inline-block mt-8 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
+          Live Demo →
+        </a>
+      </div>
     </div>
 
-    <div class="bg-white shadow-xl rounded-2xl p-6">
-      <h3 class="font-bold text-xl">Business Website</h3>
-      <p class="mt-3 text-gray-600">Responsive business website.</p>
-      <a href="https://aqua-a-z.vercel.app/" target="_blank"
-         class="inline-block mt-4 text-indigo-600">Live Demo →</a>
+    <!-- Project Card -->
+    <div class="group relative rounded-2xl p-[1px]
+                bg-gradient-to-r from-purple-500 to-pink-500
+                hover:scale-[1.02] transition">
+
+      <div class="bg-white rounded-2xl p-8 shadow-xl group-hover:shadow-2xl">
+        <h3 class="text-2xl font-bold">Business Website</h3>
+
+        <p class="mt-4 text-gray-600">
+          Modern mobile-first business website with clean UI
+          and performance-focused design.
+        </p>
+
+        <div class="mt-4 text-sm font-semibold text-purple-600">
+          HTML · TailwindCSS · JavaScript
+        </div>
+
+        <a href="https://aqua-a-z.vercel.app/" target="_blank"
+           class="inline-block mt-8 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+          Live Demo →
+        </a>
+      </div>
     </div>
+
   </div>
 </section>
 
 <!-- ================= SERVICES ================= -->
 <section id="services" class="hidden-section py-24 px-6 bg-gray-100">
-  <h2 class="text-3xl font-bold text-center mb-10">Services & Hourly Rates (USD)</h2>
+  <h2 class="text-4xl font-extrabold text-center mb-16">
+    Services & Hourly Rates (USD)
+  </h2>
 
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-    <div class="bg-white p-6 rounded-2xl shadow">
-      <h3 class="font-bold">Frontend Development</h3>
-      <p class="mt-3 text-indigo-600">$7 – $15 / hour</p>
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+
+    <!-- Frontend -->
+    <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition">
+      <h3 class="text-2xl font-bold">Frontend Development</h3>
+      <ul class="mt-6 space-y-3 text-gray-600">
+        <li>✔ Mobile-first responsive UI</li>
+        <li>✔ HTML, CSS, TailwindCSS</li>
+        <li>✔ JavaScript interactions</li>
+      </ul>
+      <div class="mt-8 text-3xl font-extrabold text-indigo-600">
+        $7 – $15 <span class="text-sm text-gray-500">/ hour</span>
+      </div>
     </div>
 
-    <div class="bg-white p-6 rounded-2xl shadow border-2 border-indigo-600">
-      <h3 class="font-bold">Full Stack Development</h3>
-      <p class="mt-3 text-indigo-600">$15 – $25 / hour</p>
+    <!-- Full Stack -->
+    <div class="relative bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition border-2 border-indigo-600">
+      <span class="absolute -top-4 right-4 bg-indigo-600 text-white text-xs px-3 py-1 rounded-full">
+        Most Popular
+      </span>
+      <h3 class="text-2xl font-bold">Full Stack Development</h3>
+      <ul class="mt-6 space-y-3 text-gray-600">
+        <li>✔ Frontend + Backend</li>
+        <li>✔ REST APIs</li>
+        <li>✔ Database integration</li>
+      </ul>
+      <div class="mt-8 text-3xl font-extrabold text-indigo-600">
+        $15 – $25 <span class="text-sm text-gray-500">/ hour</span>
+      </div>
     </div>
 
-    <div class="bg-white p-6 rounded-2xl shadow">
-      <h3 class="font-bold">Testing Services</h3>
-      <p class="mt-3 text-indigo-600">$5 – $10 / hour</p>
+    <!-- Testing -->
+    <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition">
+      <h3 class="text-2xl font-bold">Testing Services</h3>
+      <ul class="mt-6 space-y-3 text-gray-600">
+        <li>✔ Manual Testing</li>
+        <li>✔ Automation Testing</li>
+        <li>✔ Regression & Sanity</li>
+      </ul>
+      <div class="mt-8 text-3xl font-extrabold text-indigo-600">
+        $5 – $10 <span class="text-sm text-gray-500">/ hour</span>
+      </div>
     </div>
+
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="hidden-section py-24 px-6">
-  <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
+<section id="contact" class="hidden-section py-24 px-6 bg-white">
+  <h2 class="text-4xl font-extrabold text-center mb-12">Contact Me</h2>
 
-  <div class="max-w-md mx-auto bg-white p-6 rounded-2xl shadow">
+  <div class="max-w-md mx-auto bg-gray-50 p-6 rounded-2xl shadow-xl">
     <form action="https://formsubmit.co/muthamgarivenu234@gmail.com"
           method="POST" class="space-y-4">
 
       <input type="hidden" name="_captcha" value="false">
 
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded">
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded">
-      <textarea name="message" placeholder="Your Message" required class="w-full p-3 border rounded"></textarea>
+      <input type="text" name="name" placeholder="Your Name" required
+             class="w-full p-3 border rounded">
+
+      <input type="email" name="email" placeholder="Your Email" required
+             class="w-full p-3 border rounded">
+
+      <textarea name="message" placeholder="Your Message" required
+                class="w-full p-3 border rounded"></textarea>
 
       <button type="submit"
-              class="w-full bg-indigo-600 text-white py-3 rounded-lg">
+              class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700">
         Send Message
       </button>
     </form>
@@ -154,13 +239,12 @@
 
 <!-- ================= JS ================= -->
 <script>
-  function showSection(sectionId) {
+  function showSection(section) {
     const sections = ['home', 'projects', 'services', 'contact'];
     sections.forEach(id => {
       document.getElementById(id).style.display =
-        id === sectionId ? 'block' : 'none';
+        id === section ? 'block' : 'none';
     });
-
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>

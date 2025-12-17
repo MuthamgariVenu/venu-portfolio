@@ -4,76 +4,62 @@
   <meta charset="UTF-8">
   <title>Muthamgari Venu | Full Stack Web Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    html { scroll-behavior: smooth; }
-    .hidden-section { display: none; }
+    .page { display: none; }
+    .active { display: block; }
   </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-<!-- ================= NAVBAR ================= -->
-<nav class="fixed top-0 w-full bg-white border-b z-50">
+<!-- ================= HEADER ================= -->
+<header class="bg-white border-b">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 onclick="showSection('home')"
+    <h1 onclick="openPage('home')"
         class="text-lg font-semibold text-indigo-600 cursor-pointer">
       Muthamgari Venu
     </h1>
 
-    <div class="hidden md:flex space-x-6 text-sm font-medium">
-      <button onclick="showSection('projects')" class="hover:text-indigo-600">Projects</button>
-      <button onclick="showSection('services')" class="hover:text-indigo-600">Services</button>
-      <button onclick="showSection('contact')" class="hover:text-indigo-600">Contact</button>
-    </div>
+    <nav class="space-x-6 text-sm font-medium">
+      <button onclick="openPage('projects')" class="hover:text-indigo-600">Projects</button>
+      <button onclick="openPage('services')" class="hover:text-indigo-600">Services</button>
+      <button onclick="openPage('contact')" class="hover:text-indigo-600">Contact</button>
+    </nav>
   </div>
-</nav>
-
-<!-- ================= MOBILE MODULE NAV ================= -->
-<div class="md:hidden fixed top-16 w-full bg-white border-b z-40">
-  <div class="grid grid-cols-3 text-center text-xs font-medium">
-    <button onclick="showSection('projects')" class="py-3">📂<br>Projects</button>
-    <button onclick="showSection('services')" class="py-3">🛠️<br>Services</button>
-    <button onclick="showSection('contact')" class="py-3">📩<br>Contact</button>
-  </div>
-</div>
+</header>
 
 <!-- ================= HOME ================= -->
-<section id="home" class="min-h-screen pt-40 md:pt-28 px-6">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<section id="home" class="page active h-[calc(100vh-72px)] flex items-center">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
     <div>
-      <h2 class="text-4xl md:text-5xl font-bold">
-        Muthamgari Venu
-      </h2>
-
-      <p class="mt-4 text-lg text-gray-600">
+      <h2 class="text-4xl font-bold">Muthamgari Venu</h2>
+      <p class="mt-3 text-lg text-gray-600">
         Full Stack Web Developer & QA Engineer
       </p>
 
-      <p class="mt-6 text-gray-600 leading-relaxed max-w-xl">
-        I build and test scalable, production-ready web applications
-        with clean UI and reliable backend logic.
+      <p class="mt-5 text-gray-600 max-w-xl">
+        I design, develop, and test reliable web applications
+        for real-world business use cases.
       </p>
 
       <div class="mt-8 flex gap-4">
-        <button onclick="showSection('contact')"
+        <button onclick="openPage('projects')"
                 class="bg-indigo-600 text-white px-6 py-3 rounded-md">
-          Get Free Consultation
+          View Projects
         </button>
-
-        <button onclick="showSection('projects')"
+        <button onclick="openPage('contact')"
                 class="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-md">
-          View Work
+          Contact Me
         </button>
       </div>
     </div>
 
     <div class="flex justify-center">
       <img src="profile.jpg"
-           class="w-64 h-64 object-cover rounded-xl shadow-lg"
+           class="w-64 h-64 rounded-xl shadow"
            alt="Muthamgari Venu">
     </div>
 
@@ -81,30 +67,42 @@
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section id="projects" class="hidden-section py-20 px-6">
-  <h2 class="text-3xl font-semibold text-center mb-12">
+<section id="projects" class="page py-16">
+  <h2 class="text-2xl font-semibold text-center mb-10">
     Featured Projects
   </h2>
 
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-6">
 
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+    <!-- Card -->
+    <div class="bg-white rounded-xl shadow p-6">
       <h3 class="font-semibold text-lg">Hospital Management System</h3>
-      <p class="mt-3 text-gray-600">
-        Appointment booking and admin dashboard for hospitals.
+      <p class="mt-2 text-gray-600">
+        A hospital web application with appointment booking,
+        admin dashboard, and patient records management.
       </p>
-      <a href="https://ashwini-hospital.vercel.app/" target="_blank"
+      <p class="mt-3 text-sm text-indigo-600">
+        Tech Stack: HTML, TailwindCSS, JavaScript
+      </p>
+      <a href="https://ashwini-hospital.vercel.app/"
+         target="_blank"
          class="inline-block mt-4 text-indigo-600 font-medium">
         Live Demo →
       </a>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+    <!-- Card -->
+    <div class="bg-white rounded-xl shadow p-6">
       <h3 class="font-semibold text-lg">Business Website</h3>
-      <p class="mt-3 text-gray-600">
-        Mobile-first responsive business website.
+      <p class="mt-2 text-gray-600">
+        A responsive business website designed for real clients
+        with a clean UI and mobile-first approach.
       </p>
-      <a href="https://aqua-a-z.vercel.app/" target="_blank"
+      <p class="mt-3 text-sm text-indigo-600">
+        Tech Stack: HTML, TailwindCSS, JavaScript
+      </p>
+      <a href="https://aqua-a-z.vercel.app/"
+         target="_blank"
          class="inline-block mt-4 text-indigo-600 font-medium">
         Live Demo →
       </a>
@@ -114,34 +112,49 @@
 </section>
 
 <!-- ================= SERVICES ================= -->
-<section id="services" class="hidden-section py-20 px-6 bg-gray-100">
-  <h2 class="text-3xl font-semibold text-center mb-12">
+<section id="services" class="page py-16 bg-gray-100">
+  <h2 class="text-2xl font-semibold text-center mb-10">
     Services & Hourly Rates (USD)
   </h2>
 
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
 
-    <div class="bg-white p-6 rounded-xl shadow">
+    <div class="bg-white rounded-xl shadow p-6">
       <h3 class="font-semibold">Frontend Development</h3>
-      <p class="mt-2 text-gray-600">$7 – $15 / hour</p>
+      <ul class="mt-3 text-sm text-gray-600 space-y-1">
+        <li>• Responsive UI (Mobile-first)</li>
+        <li>• HTML, CSS, TailwindCSS</li>
+        <li>• JavaScript interactions</li>
+      </ul>
+      <p class="mt-4 font-medium text-indigo-600">$7 – $15 / hour</p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow border border-indigo-600">
+    <div class="bg-white rounded-xl shadow p-6 border border-indigo-600">
       <h3 class="font-semibold">Full Stack Development</h3>
-      <p class="mt-2 text-gray-600">$15 – $25 / hour</p>
+      <ul class="mt-3 text-sm text-gray-600 space-y-1">
+        <li>• Frontend + Backend</li>
+        <li>• REST API development</li>
+        <li>• Database integration</li>
+      </ul>
+      <p class="mt-4 font-medium text-indigo-600">$15 – $25 / hour</p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow">
+    <div class="bg-white rounded-xl shadow p-6">
       <h3 class="font-semibold">Testing Services</h3>
-      <p class="mt-2 text-gray-600">$5 – $10 / hour</p>
+      <ul class="mt-3 text-sm text-gray-600 space-y-1">
+        <li>• Manual Testing</li>
+        <li>• Automation Testing</li>
+        <li>• Regression & Sanity</li>
+      </ul>
+      <p class="mt-4 font-medium text-indigo-600">$5 – $10 / hour</p>
     </div>
 
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="hidden-section py-20 px-6">
-  <h2 class="text-3xl font-semibold text-center mb-10">Contact Me</h2>
+<section id="contact" class="page py-16">
+  <h2 class="text-2xl font-semibold text-center mb-8">Contact Me</h2>
 
   <div class="max-w-md mx-auto bg-white p-6 rounded-xl shadow">
     <form action="https://formsubmit.co/muthamgarivenu234@gmail.com"
@@ -149,9 +162,12 @@
 
       <input type="hidden" name="_captcha" value="false">
 
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded">
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded">
-      <textarea name="message" placeholder="Your Message" required class="w-full p-3 border rounded"></textarea>
+      <input type="text" name="name" placeholder="Your Name" required
+             class="w-full p-3 border rounded">
+      <input type="email" name="email" placeholder="Your Email" required
+             class="w-full p-3 border rounded">
+      <textarea name="message" placeholder="Your Message" required
+                class="w-full p-3 border rounded"></textarea>
 
       <button type="submit"
               class="w-full bg-indigo-600 text-white py-3 rounded-md">
@@ -161,18 +177,17 @@
   </div>
 </section>
 
-<footer class="py-6 text-center text-sm text-gray-500">
+<!-- ================= FOOTER ================= -->
+<footer class="text-center text-sm text-gray-500 py-4">
   © 2025 Muthamgari Venu
 </footer>
 
+<!-- ================= JS ================= -->
 <script>
-  function showSection(section) {
-    const sections = ['home', 'projects', 'services', 'contact'];
-    sections.forEach(id => {
-      document.getElementById(id).style.display =
-        id === section ? 'block' : 'none';
-    });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  function openPage(pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+    window.scrollTo(0, 0);
   }
 </script>
 

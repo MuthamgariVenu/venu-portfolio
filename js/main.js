@@ -1,17 +1,9 @@
-// Smooth scroll for navbar links
-document.querySelectorAll("a[href^='#']").forEach(link => {
-  link.addEventListener("click", function (e) {
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", e => {
     e.preventDefault();
-    document.querySelector(this.getAttribute("href"))
+    document
+      .querySelector(link.getAttribute("href"))
       .scrollIntoView({ behavior: "smooth" });
   });
 });
-
-// Contact form UI validation (FormSubmit handles email)
-const form = document.getElementById("contactForm");
-
-if (form) {
-  form.addEventListener("submit", () => {
-    console.log("Form submitted");
-  });
-}

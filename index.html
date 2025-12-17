@@ -1,203 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Venu | Full Stack Web Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Muthamgari Venu | Full Stack Web Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Tailwind -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./css/styles.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 
-<body class="bg-gray-950 text-gray-200">
+<body class="bg-gray-50 text-gray-800">
 
-<!-- NAVBAR -->
-<nav class="fixed w-full bg-gray-900 z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
-    <h1 class="font-bold text-white">Venu</h1>
-    <div class="space-x-4 text-sm">
-      <a href="#projects">Projects</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+<!-- ================= NAVBAR ================= -->
+<nav class="fixed w-full bg-white shadow z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-lg font-bold text-indigo-600">
+      Muthamgari Venu
+    </h1>
+
+    <div class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="#projects" class="hover:text-indigo-600">Projects</a>
+      <a href="#services" class="hover:text-indigo-600">Services</a>
+      <a href="#contact" class="hover:text-indigo-600">Contact</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="min-h-screen flex items-center pt-24">
-  <div class="max-w-5xl mx-auto text-center px-6">
-    <h2 class="text-4xl md:text-6xl font-bold">
-      Hi, I'm <span class="text-indigo-500">Venu</span>
+<!-- ================= HERO ================= -->
+<section class="min-h-screen flex items-center pt-24 px-4 bg-gradient-to-b from-white to-gray-100">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl md:text-6xl font-bold text-gray-900">
+      Muthamgari Venu
     </h2>
-    <p class="mt-4 text-xl text-gray-400">
-      Full Stack Web Developer & QA Automation Engineer
+
+    <p class="mt-4 text-xl text-gray-600">
+      Full Stack Web Developer & QA Engineer
     </p>
-    <p class="mt-6 text-gray-400">
-      I build and test scalable web applications that are fast, reliable,
-      and ready for real users.
+
+    <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+      I build and test fast, scalable, and user-friendly web applications
+      that help businesses and startups grow.
     </p>
+
     <a href="#contact"
-       class="inline-block mt-8 bg-indigo-600 px-6 py-3 rounded hover:bg-indigo-700">
+       class="inline-block mt-8 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
       Get Free Consultation
     </a>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="py-20 max-w-6xl mx-auto px-6">
-  <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">
+      Featured Projects
+    </h2>
 
-  <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid gap-8 md:grid-cols-2">
 
-    <div class="project-card bg-gray-900 p-6 rounded-lg">
-      <h3 class="font-semibold">Hospital Management System</h3>
-      <p class="text-sm text-gray-400">
-        Appointment booking & admin dashboard.
-      </p>
-      <p class="text-xs text-indigo-400 mt-2">
-        HTML, Tailwind, JavaScript
-      </p>
-      <a href="https://ashwini-hospital.vercel.app/"
-         target="_blank"
-         class="inline-block mt-4 text-indigo-400 underline">
-        Live Project
-      </a>
+      <!-- Project Card 1 -->
+      <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6">
+        <h3 class="text-xl font-semibold text-gray-900">
+          Hospital Management System
+        </h3>
+
+        <p class="text-gray-600 mt-3">
+          A complete hospital solution with appointment booking,
+          admin dashboard, and patient management.
+        </p>
+
+        <p class="text-sm text-indigo-600 mt-3 font-medium">
+          Tech Stack: HTML, TailwindCSS, JavaScript
+        </p>
+
+        <div class="mt-6 flex space-x-4">
+          <a href="https://ashwini-hospital.vercel.app/"
+             target="_blank"
+             class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+            Live Demo
+          </a>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6">
+        <h3 class="text-xl font-semibold text-gray-900">
+          Business Website
+        </h3>
+
+        <p class="text-gray-600 mt-3">
+          A responsive business website designed for real clients
+          with clean UI and mobile-first approach.
+        </p>
+
+        <p class="text-sm text-indigo-600 mt-3 font-medium">
+          Tech Stack: HTML, TailwindCSS, JavaScript
+        </p>
+
+        <div class="mt-6 flex space-x-4">
+          <a href="https://aqua-a-z.vercel.app/"
+             target="_blank"
+             class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+            Live Demo
+          </a>
+        </div>
+      </div>
+
     </div>
-
-    <div class="project-card bg-gray-900 p-6 rounded-lg">
-      <h3 class="font-semibold">Business Website</h3>
-      <p class="text-sm text-gray-400">
-        Responsive business website.
-      </p>
-      <p class="text-xs text-indigo-400 mt-2">
-        HTML, Tailwind, JavaScript
-      </p>
-      <a href="https://aqua-a-z.vercel.app/"
-         target="_blank"
-         class="inline-block mt-4 text-indigo-400 underline">
-        Live Project
-      </a>
-    </div>
-
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="py-20 bg-gray-900">
-  <div class="max-w-7xl mx-auto px-6">
+<!-- ================= SERVICES ================= -->
+<section id="services" class="py-20 bg-white px-4">
+  <div class="max-w-7xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-12">
-      Services & Hourly Rates
+      Services & Hourly Rates (USD)
     </h2>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid gap-8 md:grid-cols-3">
 
-      <!-- Frontend -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transition">
-        <h3 class="font-semibold text-lg">
-          Frontend Development
-        </h3>
-
-        <ul class="text-sm text-gray-400 mt-4 space-y-2">
+      <div class="bg-gray-50 p-6 rounded-xl shadow">
+        <h3 class="font-semibold text-lg">Frontend Development</h3>
+        <ul class="mt-4 space-y-2 text-sm text-gray-600">
           <li>✔ Responsive UI (Mobile-first)</li>
           <li>✔ HTML, CSS, TailwindCSS</li>
           <li>✔ JavaScript interactions</li>
-          <li>✔ SEO-friendly pages</li>
         </ul>
-
-        <p class="mt-5 text-indigo-400 font-semibold">
+        <p class="mt-5 text-indigo-600 font-semibold">
           $7 – $15 / hour
         </p>
-
-        <p class="text-xs text-gray-400 mt-2">
-          Ideal for websites, landing pages, UI improvements
-        </p>
       </div>
 
-      <!-- Full Stack -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transition">
-        <h3 class="font-semibold text-lg">
-          Full-Stack Web Development
-        </h3>
-
-        <ul class="text-sm text-gray-400 mt-4 space-y-2">
+      <div class="bg-gray-50 p-6 rounded-xl shadow">
+        <h3 class="font-semibold text-lg">Full Stack Development</h3>
+        <ul class="mt-4 space-y-2 text-sm text-gray-600">
           <li>✔ Frontend + Backend</li>
-          <li>✔ REST APIs & integrations</li>
-          <li>✔ Database (MongoDB / SQL)</li>
-          <li>✔ Admin panel & auth</li>
+          <li>✔ REST APIs</li>
+          <li>✔ Database integration</li>
         </ul>
-
-        <p class="mt-5 text-indigo-400 font-semibold">
+        <p class="mt-5 text-indigo-600 font-semibold">
           $15 – $25 / hour
         </p>
-
-        <p class="text-xs text-gray-400 mt-2">
-          Best for startups, SaaS, custom applications
-        </p>
       </div>
 
-      <!-- Testing -->
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transition">
-        <h3 class="font-semibold text-lg">
-          Testing Services
-        </h3>
-
-        <ul class="text-sm text-gray-400 mt-4 space-y-2">
+      <div class="bg-gray-50 p-6 rounded-xl shadow">
+        <h3 class="font-semibold text-lg">Testing Services</h3>
+        <ul class="mt-4 space-y-2 text-sm text-gray-600">
           <li>✔ Manual Testing</li>
-          <li>✔ Test case creation</li>
-          <li>✔ Regression & sanity testing</li>
-          <li>✔ Automation (UI / API)</li>
+          <li>✔ Automation Testing</li>
+          <li>✔ Regression & Sanity</li>
         </ul>
-
-        <p class="mt-5 text-indigo-400 font-semibold">
+        <p class="mt-5 text-indigo-600 font-semibold">
           $5 – $10 / hour
-        </p>
-
-        <p class="text-xs text-gray-400 mt-2">
-          Ensuring quality, stability, and performance
         </p>
       </div>
 
     </div>
-
-    <p class="text-center text-xs text-gray-400 mt-10">
-      * Final cost depends on project scope, timeline, and complexity.
-    </p>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="py-20">
-  <div class="max-w-md mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-6">Contact Me</h2>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-20 px-4 bg-gray-100">
+  <div class="max-w-md mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-6">
+      Contact Me
+    </h2>
 
-    <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com"
+    <!-- WORKING EMAIL FORM -->
+    <form action="https://formsubmit.co/muthamgarivenu234@gmail.com"
           method="POST"
-          class="space-y-4">
+          class="space-y-4 bg-white p-6 rounded-xl shadow">
 
       <input type="hidden" name="_captcha" value="false">
 
       <input type="text" name="name" placeholder="Your Name" required
-        class="w-full p-3 bg-gray-800 rounded">
+        class="w-full p-3 rounded border border-gray-300">
 
       <input type="email" name="email" placeholder="Your Email" required
-        class="w-full p-3 bg-gray-800 rounded">
+        class="w-full p-3 rounded border border-gray-300">
 
-      <textarea name="message" placeholder="Your Requirement" required
-        class="w-full p-3 bg-gray-800 rounded"></textarea>
+      <textarea name="message" placeholder="Your Message" required
+        class="w-full p-3 rounded border border-gray-300"></textarea>
 
       <button type="submit"
-        class="w-full bg-indigo-600 py-3 rounded hover:bg-indigo-700">
+        class="w-full bg-indigo-600 text-white py-3 rounded hover:bg-indigo-700 transition">
         Send Message
       </button>
     </form>
   </div>
 </section>
 
-<footer class="py-6 text-center text-sm text-gray-500">
-  © 2025 Venu | Full Stack Developer & QA
+<!-- ================= FOOTER ================= -->
+<footer class="py-6 text-center text-sm text-gray-600 bg-white">
+  © 2025 Muthamgari Venu | Full Stack Developer & QA Engineer
 </footer>
 
-<script src="./js/main.js"></script>
 </body>
 </html>

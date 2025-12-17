@@ -1,229 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Venu | Full Stack Web Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body class="bg-gray-950 text-gray-200">
 
-<!-- ================= NAVBAR ================= -->
-<nav class="fixed w-full bg-gray-900 z-50 shadow">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold text-white">Venu</h1>
-    <ul class="hidden md:flex space-x-6 text-sm">
-      <li><a href="#about" class="hover:text-indigo-400">About</a></li>
-      <li><a href="#skills" class="hover:text-indigo-400">Skills</a></li>
-      <li><a href="#services" class="hover:text-indigo-400">Services</a></li>
-      <li><a href="#projects" class="hover:text-indigo-400">Projects</a></li>
-      <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+  <!-- NAVBAR -->
+  <nav class="fixed w-full bg-gray-900 z-50">
+    ...
+  </nav>
 
-<!-- ================= HERO ================= -->
-<section class="min-h-screen flex items-center pt-24">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <h2 class="text-4xl md:text-6xl font-bold text-white">
-      Hi, I'm <span class="text-indigo-500">Venu</span>
-    </h2>
-    <p class="mt-4 text-xl text-gray-400">
-      Full Stack Web Developer | Freelancer
-    </p>
-    <p class="mt-6 max-w-2xl mx-auto text-gray-400">
-      I build fast, scalable, and business-focused web applications
-      that help startups and businesses grow.
-    </p>
+  <!-- HERO -->
+  <section id="hero">
+    ...
+  </section>
 
-    <div class="mt-8 flex justify-center space-x-4">
-      <a href="#contact"
-         class="px-6 py-3 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition">
-        Hire Me
-      </a>
-      <a href="#projects"
-         class="px-6 py-3 border border-indigo-500 rounded-lg hover:bg-indigo-600 transition">
-        View Projects
-      </a>
-    </div>
-  </div>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    ...
+  </section>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="py-20 bg-gray-900">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <h3 class="text-3xl font-bold mb-6">About Me</h3>
-    <p class="text-gray-400 leading-relaxed">
-      I help startups and businesses build reliable, user-friendly web applications.
-      I focus on clean code, scalable backend logic, and responsive UI.
-      <br><br>
-      I work as a freelance partner — clear communication, timely delivery,
-      and long-term support.
-    </p>
-  </div>
-</section>
+  <!-- PROJECTS -->
+  <section id="projects">
+    ...
+  </section>
 
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="py-20">
-  <div class="max-w-6xl mx-auto px-6">
-    <h3 class="text-3xl font-bold text-center mb-12">Skills</h3>
-
-    <div class="grid md:grid-cols-4 gap-6">
-      <div class="bg-gray-900 p-6 rounded-lg">
-        <h4 class="font-semibold mb-2">Frontend</h4>
-        <p class="text-gray-400 text-sm">HTML, CSS, TailwindCSS, JavaScript</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-lg">
-        <h4 class="font-semibold mb-2">Backend</h4>
-        <p class="text-gray-400 text-sm">Node.js, Express.js</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-lg">
-        <h4 class="font-semibold mb-2">Database</h4>
-        <p class="text-gray-400 text-sm">MongoDB</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-lg">
-        <h4 class="font-semibold mb-2">Tools</h4>
-        <p class="text-gray-400 text-sm">Git, REST APIs</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section id="services" class="py-20 bg-gray-900">
-  <div class="max-w-6xl mx-auto px-6">
-    <h3 class="text-3xl font-bold text-center mb-12">Services</h3>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transition">
-        <h4 class="font-semibold mb-2">Website Development</h4>
-        <p class="text-gray-400 text-sm">
-          Professional, fast, and SEO-friendly websites.
-        </p>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transition">
-        <h4 class="font-semibold mb-2">Full Stack Web Apps</h4>
-        <p class="text-gray-400 text-sm">
-          Complete apps with frontend, backend, and database.
-        </p>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transition">
-        <h4 class="font-semibold mb-2">API Development</h4>
-        <p class="text-gray-400 text-sm">
-          Secure and scalable REST APIs.
-        </p>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transition">
-        <h4 class="font-semibold mb-2">Bug Fixing & Optimization</h4>
-        <p class="text-gray-400 text-sm">
-          Fix issues and improve performance.
-        </p>
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-lg hover:scale-105 transition">
-        <h4 class="font-semibold mb-2">Mobile-First Design</h4>
-        <p class="text-gray-400 text-sm">
-          Responsive design for all devices.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="py-20">
-  <div class="max-w-6xl mx-auto px-6">
-    <h3 class="text-3xl font-bold text-center mb-12">Projects</h3>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
-        <h4 class="font-semibold">Hospital Management System</h4>
-        <p class="text-gray-400 text-sm mt-2">
-          Appointment booking and admin dashboard.
-        </p>
-        <p class="text-xs text-indigo-400 mt-2">
-          HTML, Tailwind, JS, Node.js, MongoDB
-        </p>
-        <div class="mt-4">
-          <a href="https://ashwini-hospital.vercel.app/" target="_blank"
-             class="text-indigo-400 hover:underline">Live</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
-        <h4 class="font-semibold">Business Website + Admin</h4>
-        <p class="text-gray-400 text-sm mt-2">
-          Dynamic business website with admin control.
-        </p>
-        <p class="text-xs text-indigo-400 mt-2">
-          HTML, Tailwind, JS, Express
-        </p>
-        <div class="mt-4">
-          <a href="https://aqua-a-z.vercel.app/" target="_blank"
-             class="text-indigo-400 hover:underline">Live</a>
-        </div>
-      </div>
-
-      <div class="bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
-        <h4 class="font-semibold">Data Dashboard App</h4>
-        <p class="text-gray-400 text-sm mt-2">
-          Dashboard for business analytics.
-        </p>
-        <p class="text-xs text-indigo-400 mt-2">
-          JavaScript, REST APIs, MongoDB
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT (EMAIL WORKING) ================= -->
-<section id="contact" class="py-20 bg-gray-900">
-  <div class="max-w-md mx-auto px-6">
-    <h3 class="text-3xl font-bold text-center mb-8">Contact Me</h3>
-
-    <!-- 🔴 CHANGE YOUR EMAIL BELOW -->
-    <form action="https://formsubmit.co/muthamgarivenu234@gmail.com" method="POST" class="space-y-4">
-
-      <!-- Disable Captcha -->
+  <!-- CONTACT -->
+  <section id="contact">
+    <form
+      action="https://formsubmit.co/YOUR_EMAIL@gmail.com"
+      method="POST"
+      id="contactForm"
+    >
       <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next"
+        value="https://muthamgarivenu.github.io/portfolio-venu/#contact">
 
-      <!-- Success Page Redirect -->
-      <input type="hidden" name="_next" value="https://muthamgarivenu.github.io/venu-portfolio/#contact">
+      <input name="name" required>
+      <input name="email" type="email" required>
+      <textarea name="message" required></textarea>
 
-      <input type="text" name="name" placeholder="Your Name" required
-        class="w-full p-3 rounded bg-gray-800 border border-gray-700">
-
-      <input type="email" name="email" placeholder="Your Email" required
-        class="w-full p-3 rounded bg-gray-800 border border-gray-700">
-
-      <textarea name="message" placeholder="Your Message" required
-        class="w-full p-3 rounded bg-gray-800 border border-gray-700"></textarea>
-
-      <button type="submit"
-        class="w-full bg-indigo-600 py-3 rounded hover:bg-indigo-700 transition">
-        Send Message
-      </button>
+      <button type="submit">Send Message</button>
     </form>
-  </div>
-</section>
+  </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="bg-gray-950 py-6 text-center text-sm text-gray-500">
-  © 2025 Venu | Full Stack Web Developer
-</footer>
+  <!-- FOOTER -->
+  <footer>© 2025 Venu</footer>
 
+  <!-- MAIN JS -->
+  <script src="./js/main.js"></script>
 </body>
 </html>
